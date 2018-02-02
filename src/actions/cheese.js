@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const FETCH_CHEESES_REQUEST = 'FETCH_CHEESES_REQUEST';
 export const fetchCheeseRequest = () => ({
   type: FETCH_CHEESES_REQUEST,

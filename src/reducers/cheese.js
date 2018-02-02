@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
   FETCH_CHEESES_ERROR,
   FETCH_CHEESES_REQUEST,

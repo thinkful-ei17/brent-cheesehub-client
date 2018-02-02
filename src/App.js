@@ -1,21 +1,13 @@
 import React from 'react';
 
-import CheeseList from './components/cheese-list/cheese-list';
+import CheeseListConnected from './components/cheese-list/cheese-list';
 import './App.css';
 
-class App extends React.Component {
-  render() {
-    const cheesesArray = [
-      'Bath Blue',
-      'Barkham Blue',
-      'Buxton Blue',
-    ];
-    return (
-      <div>
-        <CheeseList cheeses={cheesesArray} />
-      </div>
-    );
-  }
+export default function App(props) {
+  return (
+    <div>
+      <CheeseListConnected />
+    </div>
+  );
 }
 
-export default App;

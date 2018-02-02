@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { FETCH_CHEESES_ERROR, FETCH_CHEESES_REQUEST, FETCH_CHEESES_SUCCESS } from '../actions/cheese';
+import {
+  FETCH_CHEESES_ERROR,
+  FETCH_CHEESES_REQUEST,
+  FETCH_CHEESES_SUCCESS,
+} from '../actions/cheese';
 
 const initialState = {
   cheeses: [],
@@ -8,7 +12,7 @@ const initialState = {
   error: null,
 };
 
-export default function reducer(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
   case FETCH_CHEESES_ERROR:
     return {
@@ -33,4 +37,6 @@ export default function reducer(state = initialState, action) {
   default:
     return state;
   }
-}
+};
+
+export default reducer;

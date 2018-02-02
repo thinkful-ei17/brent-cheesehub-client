@@ -15,11 +15,17 @@ export const fetchCheesesError = error => ({
 });
 
 
-export const fetchCheeses = cheeses => (dispatch) => {
+export const fetchCheeses = () => (dispatch) => {
   dispatch(fetchCheeseRequest());
   return fetch('http://localhost:8080/cheeses')
-    .then(res => (!res.ok ? Promise.reject(res.statusText) : res.json()))
-    .then(dispatch(fetchCheesesSuccess(cheeses)))
+    .then((res) => {
+      if (!res.ok) {
+        return Promise.reject(res.statusText);
+      }
+      return res.json();
+    })
+    .then(cheeses =>
+      dispatch(fetchCheesesSuccess(cheeses)))
     .catch(err =>
       dispatch(fetchCheesesError(err)));
 };

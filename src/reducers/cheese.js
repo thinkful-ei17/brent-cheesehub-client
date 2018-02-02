@@ -30,7 +30,7 @@ const reducer = (state = initialState, action) => {
       ...state,
       error: null,
       loading: false,
-      cheeses: [action.cheeses],
+      cheeses: action.cheeses,
     };
   default:
     return state;

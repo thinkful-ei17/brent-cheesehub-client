@@ -11,7 +11,9 @@ class App extends React.Component {
       'Buxton Blue',
     ];
     return (
-      <CheeseList cheeses={cheesesArray} />
+      <div>
+        <CheeseList cheeses={cheesesArray} />
+      </div>
     );
   }
 }
